@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:padding="16dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập N (ví dụ 100)">
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLimit"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 2 dòng RadioGroup, lập trình để chỉ chọn 1 trong 6 -->
+    <RadioGroup
+            android:id="@+id/rgRow1"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+        <RadioButton
+                android:id="@+id/rbOdd"
+                android:checked="true"
+                android:text="@string/odd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <RadioButton
+                android:id="@+id/rbPrime"
+                android:text="@string/prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"/>
+        <RadioButton
+                android:id="@+id/rbPerfect"
+                android:text="@string/perfect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"/>
+    </RadioGroup>
+
+    <RadioGroup
+            android:id="@+id/rgRow2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+        <RadioButton
+                android:id="@+id/rbEven"
+                android:text="@string/even"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <RadioButton
+                android:id="@+id/rbSquare"
+                android:text="@string/square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"/>
+        <RadioButton
+                android:id="@+id/rbFibo"
+                android:text="@string/fibo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"/>
+    </RadioGroup>
+
+    <TextView
+            android:id="@+id/tvEmpty"
+            android:text="@string/no_result"
+            android:visibility="gone"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+    <ListView
+            android:id="@+id/lvNumbers"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"/>
+</LinearLayout>

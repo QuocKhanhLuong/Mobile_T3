@@ -1,0 +1,66 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Hàng chọn tiền tệ -->
+    <Spinner
+            android:id="@+id/spFrom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/spTo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            android:layout_marginEnd="8dp"/>
+
+    <Spinner
+            android:id="@+id/spTo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/spFrom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="8dp"/>
+
+    <!-- Hàng nhập số tiền -->
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilFrom"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Số tiền nguồn"
+            app:layout_constraintTop_toBottomOf="@id/spFrom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tilTo"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFrom"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Số tiền đích"
+            app:layout_constraintTop_toBottomOf="@id/spTo"
+            app:layout_constraintStart_toEndOf="@id/tilFrom"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTo"
+                android:inputType="numberDecimal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

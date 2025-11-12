@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BTVN 04-11</string>
+    <string name="goto_bai1">Bài 1: Chuyển đổi tiền tệ</string>
+    <string name="goto_bai2">Bài 2: Danh sách số nguyên</string>
+
+    <string name="odd">Số lẻ</string>
+    <string name="even">Số chẵn</string>
+    <string name="prime">Số nguyên tố</string>
+    <string name="square">Số chính phương</string>
+    <string name="perfect">Số hoàn hảo</string>
+    <string name="fibo">Số Fibonacci</string>
+    <string name="no_result">Không có số nào thỏa mãn</string>
+</resources>
