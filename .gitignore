@@ -30,3 +30,33 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Android / Gradle / IDE
+# Gradle files
+/.gradle/
+**/.gradle/
+
+# Local configuration
+local.properties
+
+# Build outputs
+/build/
+**/build/
+
+# IntelliJ / Android Studio
+/.idea/
+*.iml
+
+# Android Studio captures
+/captures/
+
+# External native build
+/.externalNativeBuild/
+/.cxx/
+
+# Kotlin
+/.gradle/
+.kotlin/
+
+# Ignore Gradle wrapper jar
+gradle-wrapper.jar
